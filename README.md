@@ -68,6 +68,29 @@ $ make > build_dumo.txt
 $ make > /dev/null
 ```
 
+### A Beast of a Different Nature
+Here are some important pieces of knowledge with  respect to the Linux kernel:
+
+- The kernel has access to neither the C library nor the standard C headers.
+This is mainly related to prevent bloating, but a lot functions are implemented inside the kernel.
+- The kernel is coded in GNU C.
+The kernel is not programmed in strict ANSI C, this means we need a supported compiler.
+- The kernel lacks the memory protection afforded to user-space.
+The kernel cannot trap itself easily thus the impacts of a memory corruption are much higher.
+- The kernel cannot easily execute floating-point operations.
+Unlike user-space, the kernel does not have the luxury of seamless support for floating
+point because it cannot easily trap itself.
+- The kernel has a small per-process fixed-size stack.
+The kernel stack is neither large nor dynamic; it is small and fixed in size. The exact
+size of the kernel’s stack varies by architecture.
+- Because the kernel has asynchronous interrupts, is preemptive, and supports SMP,
+synchronization and concurrency are major concerns within the kernel.
+The kernel is very vulnerable to race conditions.
+- Portability is important.
+This means that architecture-independent C
+code must correctly compile and run on a wide range of systems, and that architecture dependent
+code must be properly segregated in system-specific directories in the kernel
+source tree.
 
 ## Contributing
 
