@@ -92,6 +92,14 @@ code must correctly compile and run on a wide range of systems, and that archite
 code must be properly segregated in system-specific directories in the kernel
 source tree.
 
+## Chapter 3 Process Management
+This section discusses the fundamental elements of a process and a thread within the Linux environment. It describes the lifetime as well as the creation of processes / threads.
+
+### The Process
+What is a process? A program itself is not a process; a process is an active program and related resources.
+Indeed, two or more processes can exist that are executing the same program. A process is a program in execution, containing a set of resources such as open files and pending signals, internal kernel data, processor state, a memory address space with one or more memory mappings, one or more threads of execution, and a data section containing global variables. 
+
+
 ## Contributing
 
 To get started with contributing to mu GitHub repo, pleas contact me <a href="https://slack.com/">Slack<a/>.
