@@ -26,6 +26,7 @@ I am using a virtual Linux machine in order to work with the book. I am running 
 sudo apt-get update
 sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc bison flex libelf-def
 ```
+The full dependency list can be found [here](https://www.kernel.org/doc/html/latest/process/changes.html#changes).
 
 <b>Oracle VM tipp</b>
 I had trouble using a shared folder with the host OS, the following steps helped me to get the folder mounted in Linux, the solution was found [here](https://askubuntu.com/questions/456400/why-cant-i-access-a-shared-folder-from-within-my-virtualbox-machine).
@@ -47,11 +48,14 @@ This section assumes that the build environment is set up properly and ready for
 ### Configuring the kernel
 I like the variant of the `make menuconfig` for creating a `.config` file. The menu has the benefit of the option to go threw every single setting an read its corresponding explanation. I found this option very helpful at the beginning of the journey. It is also possible to change the `./config` file by hand, it is important to run `make oldconfig` afterwards in order to validate the settings. Here is the workflow:
 
-1. Create the `.config` file with the help of the menu by running:
+1. Create the `.config` file by copying your local setting:
+```
+$ cp /boot/config-$(uname -r) .config
+```
+2. If needed make manual changes to the `.conf` file.
 ```
 $ make menuconfig
 ```
-2. If needed make manual changes to the `.conf` file.
 3. Validate the changes running:
 ```
 $ make oldconfig
@@ -97,7 +101,7 @@ This section discusses the fundamental elements of a process and a thread within
 
 ### The Process
 What is a process? A program itself is not a process; a process is an active program and related resources.
-Indeed, two or more processes can exist that are executing the same program. A process is a program in execution, containing a set of resources such as open files and pending signals, internal kernel data, processor state, a memory address space with one or more memory mappings, one or more threads of execution, and a data section containing global variables. 
+Indeed, two or more processes can exist that are executing the same program. A process is a program in execution, containing a set of resources such as open files and pending signals, internal kernel data, processor state, a memory address space with one or more memory mappings, one or more threads of execution, and a data section containing global variables.
 
 
 ## Contributing
