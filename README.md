@@ -61,6 +61,27 @@ $ make menuconfig
 $ make oldconfig
 ```
 
+<b>Build issues</b><br>
+For some reason I am not able to build the kernel image due to the following error message:
+```
+$ make -j2
+Makefile:608: include/config/auto.conf: No such file or directory
+Makefile:660: include/config/auto.conf.cmd: No such file or directory
+  HOSTCC  scripts/kconfig/conf.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf  --syncconfig Kconfig
+
+*** Error during sync of the configuration.
+
+scripts/kconfig/Makefile:73: recipe for target 'syncconfig' failed
+make[2]: *** [syncconfig] Error 1
+Makefile:562: recipe for target 'syncconfig' failed
+make[1]: *** [syncconfig] Error 2
+Makefile:678: recipe for target 'include/config/auto.conf.cmd' failed
+make: *** [include/config/auto.conf.cmd] Error 2
+make: *** Deleting file 'include/config/auto.conf.cmd'
+```
+Question is posted on Stackoverflow and I am waiting for a result, see [here](https://stackoverflow.com/questions/57777429/error-building-latest-linux-kernel-within-virtualbox-under-18-04-1-ubuntu).
 ### Minimizing Build Noise
 There are some nice tricks in order to reduce some of the build noise, here are the following options:
 - Redirect the output to a file.
