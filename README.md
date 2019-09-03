@@ -1,6 +1,6 @@
 
-<a href="https://www.docker.com">
-  <img src="https://stapp.space/content/images/2016/05/docker_header1.png" alt="Docker on Windows logo" style="width:42px;height:42px;">
+<a href="https://www.kernel.org">
+  <img src="https://tr4.cbsistatic.com/hub/i/r/2017/04/12/14a178e1-45c8-47d0-a5ce-4468ce7435da/resize/770x/20e28112dd815ad71479d3b4954f7c8e/kernelhero.jpg" alt="Linux kernel image" style="width:42px;height:42px;">
 </a>
 
 # Linux Kernel Development by Robert Love</h1>
