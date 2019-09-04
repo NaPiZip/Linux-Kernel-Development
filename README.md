@@ -24,7 +24,7 @@ This is a write down of the book by Robert Love for kernel programming. My goal 
 I am using a virtual Linux machine in order to work with the book. I am running a Windows operating system and using a Oracle VM. In order to build the Linux kernel, I installed the following packages using `apt-get`:
 ```
 sudo apt-get update
-sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc bison flex libelf-def
+sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc bison flex libelf-dev
 ```
 The full dependency list can be found [here](https://www.kernel.org/doc/html/latest/process/changes.html#changes).
 
@@ -62,7 +62,7 @@ $ make oldconfig
 ```
 
 <b>Build issues</b><br>
-For some reason I am not able to build the kernel image due to the following error message:
+For some reason I was not able to build the latest kernel image from Linus Torvalds GitHub repository found [here](https://github.com/torvalds/linux), due to the following error message:
 ```
 $ make -j2
 Makefile:608: include/config/auto.conf: No such file or directory
@@ -81,7 +81,8 @@ Makefile:678: recipe for target 'include/config/auto.conf.cmd' failed
 make: *** [include/config/auto.conf.cmd] Error 2
 make: *** Deleting file 'include/config/auto.conf.cmd'
 ```
-Question is posted on Stackoverflow and I am waiting for a result, see [here](https://stackoverflow.com/questions/57777429/error-building-latest-linux-kernel-within-virtualbox-under-18-04-1-ubuntu).
+The question was posted on Stackoverflow but I couldn't get it up running, see [here](https://stackoverflow.com/questions/57777429/error-building-latest-linux-kernel-within-virtualbox-under-18-04-1-ubuntu). This is why I decided to move on with an actual official kernel release instead of using the development branch. The source can be found here [cdn.kernel.org](http://cdn.kernel.org/pub/linux/kernel/v5.x/). Turns out that the `linux-5.2.9.tar.gz` kernel builds out of the box following the process from above.
+
 ### Minimizing Build Noise
 There are some nice tricks in order to reduce some of the build noise, here are the following options:
 - Redirect the output to a file.
