@@ -1,6 +1,6 @@
 
 <a href="https://www.kernel.org">
-  <img src="https://tr4.cbsistatic.com/hub/i/r/2017/04/12/14a178e1-45c8-47d0-a5ce-4468ce7435da/resize/770x/20e28112dd815ad71479d3b4954f7c8e/kernelhero.jpg" alt="Linux kernel image" style="width:42px;height:42px;">
+  <img src="https://tr4.cbsistatic.com/hub/i/r/2017/04/12/14a178e1-45c8-47d0-a5ce-4468ce7435da/resize/770x/20e28112dd815ad71479d3b4954f7c8e/kernelhero.jpg" alt="Linux kernel image" style="width:20;height:20;">
 </a>
 
 # Linux Kernel Development by Robert Love</h1>
@@ -40,7 +40,7 @@ I had trouble using a shared folder with the host OS, the following steps helped
 sudo usermod -aG vboxsf $(whoami)
 ```
 6. Logout the user and login again.
-7. Now you can access your shared directory in `/media/sf_(shared_folder_name)`
+7. Now you can access your shared directory in `/media/sf_(shared_folder_name)`.
 
 ## Chapter 2 Getting started with the kernel
 This section assumes that the build environment is set up properly and ready for building the kernel.
@@ -125,6 +125,18 @@ This section discusses the fundamental elements of a process and a thread within
 What is a process? A program itself is not a process; a process is an active program and related resources.
 Indeed, two or more processes can exist that are executing the same program. A process is a program in execution, containing a set of resources such as open files and pending signals, internal kernel data, processor state, a memory address space with one or more memory mappings, one or more threads of execution, and a data section containing global variables.
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/NaPiZip/Linux-kernel-development/master/images/Forking%20and%20waiting.JPG" alt="Forking and waiting"/></p>
+
+### Threads
+Threads on the other hand are objects within the process, Each thread includes a unique program counter (PC), process stack and a set of processor register. The kernel schedules threads not processes! In Linux a Thread is just a special variation of a process, it's kin of a light version.
+
+### Process Descriptor, the Task Structure and allocation
+The kernel stores the list of processes in a circular doubly linked list called the task list. The process descriptor contains all the information about
+a specific process. The struct `thread_info`, lives at the bottom of the stack and points to a `task_struct`, which is part of the task list.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/NaPiZip/Linux-kernel-development/master/images/Process%20kernel%20stack.JPG" alt="Process Kernel Stack"/></p>
 
 ## Contributing
 
