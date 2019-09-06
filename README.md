@@ -1,6 +1,6 @@
 
 <a href="https://www.kernel.org">
-  <img src="https://tr4.cbsistatic.com/hub/i/r/2017/04/12/14a178e1-45c8-47d0-a5ce-4468ce7435da/resize/770x/20e28112dd815ad71479d3b4954f7c8e/kernelhero.jpg" alt="Linux kernel image" style="width:20;height:20;">
+  <img src="https://itsfoss.com/wp-content/uploads/2017/12/Linux-Kernel-5-featured.jpg" alt="Linux kernel image" style="width:20;height:20;">
 </a>
 
 # Linux Kernel Development by Robert Love</h1>
@@ -11,10 +11,7 @@
     </a>
     <a href="https://www.docker.com">
         <img src="https://img.shields.io/badge/Docker-17.05.0--ce-blue.svg"/>
-    </a>
-    <a href="http://x.cygwin.com">
-        <img src="https://img.shields.io/badge/Cygwin%2FX-7.7-blue.svg"/>
-    </a>
+    </a>    
  </div>
 <br/>
 <div>    
@@ -138,6 +135,16 @@ a specific process. The struct `thread_info`, lives at the bottom of the stack a
 <p align="center">
 <img src="https://raw.githubusercontent.com/NaPiZip/Linux-kernel-development/master/images/Process%20kernel%20stack.JPG" alt="Process Kernel Stack"/></p>
 
+### The Process Family Tree
+All processes are descendants of the init process, whose PID is one. The kernel starts init in the last step of the boot process. The init process, in turn, reads the system initscripts and executes more programs, eventually completing the boot process.
+
+### Process Creation
+Most operating systems implement a spawn mechanism to create a new process in a new address space, read in an executable, and begin executing it. Unix takes the unusual approach of separating these steps into two distinct functions: fork()and exec(). `fork()` creates a child process and `exec()` loads a new
+executable into the address space and begins executing it. Traditionally, upon fork(), all resources owned by the parent are duplicated and the copy is given to the child. In Linux, fork() is implemented through the use of copy-on-write pages. Copy-on-write (or COW) is a technique to prevent duplicate the process
+address space, the parent and the child can share a single copy.
+The data, however, is marked in such a way that if it is written to, a duplicate is made and each process receives a unique copy. Consequently, the duplication of resources occurs only when they are written; until then, they are shared read-only.
+
+Might of thinking of adding this [here](https://linuxhint.com/c_fork_system_call/).
 ## Contributing
 
 To get started with contributing to mu GitHub repo, pleas contact me <a href="https://slack.com/">Slack<a/>.
