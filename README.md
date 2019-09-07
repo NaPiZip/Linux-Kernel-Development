@@ -144,7 +144,7 @@ executable into the address space and begins executing it. Traditionally, upon f
 address space, the parent and the child can share a single copy.
 The data, however, is marked in such a way that if it is written to, a duplicate is made and each process receives a unique copy. Consequently, the duplication of resources occurs only when they are written; until then, they are shared read-only.
 
-Might of thinking of adding this [here](https://linuxhint.com/c_fork_system_call/).
+I am going to add code samples [here](https://linuxhint.com/c_fork_system_call/).
 ## Contributing
 
 To get started with contributing to mu GitHub repo, pleas contact me <a href="https://slack.com/">Slack<a/>.
