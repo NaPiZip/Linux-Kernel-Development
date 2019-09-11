@@ -1,6 +1,6 @@
 
 <a href="https://www.kernel.org">
-  <img src="https://itsfoss.com/wp-content/uploads/2017/12/Linux-Kernel-5-featured.jpg" alt="Linux kernel image" style="width:20;height:20;">
+  <img src="https://itsfoss.com/wp-content/uploads/2017/12/Linux-Kernel-5-featured.jpg" alt="Linux kernel image" height="42px" width="84px">
 </a>
 
 # Linux Kernel Development by Robert Love</h1>
