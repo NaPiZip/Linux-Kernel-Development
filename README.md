@@ -133,7 +133,7 @@ The kernel stores the list of processes in a circular doubly linked list called 
 a specific process. The struct `thread_info`, lives at the bottom of the stack and points to a `task_struct`, which is part of the task list.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/NaPiZip/Linux-kernel-development/master/images/Process%20kernel%20stack.JPG" alt="Process Kernel Stack"/></p>
+<img src="https://raw.githubusercontent.com/NaPiZip/Linux-kernel-development/master/images/Process%20kernel%20stack.JPG" alt="Process Kernel Stack" height="50%" width="50%"/></p>
 
 ### The Process Family Tree
 All processes are descendants of the init process, whose PID is one. The kernel starts init in the last step of the boot process. The init process, in turn, reads the system initscripts and executes more programs, eventually completing the boot process.
