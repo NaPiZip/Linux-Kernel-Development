@@ -25,7 +25,7 @@ sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-de
 ```
 The full dependency list can be found [here](https://www.kernel.org/doc/html/latest/process/changes.html#changes).
 
-<b>Oracle VM tipp</b>
+<b>Oracle VM tip</b>
 I had trouble using a shared folder with the host OS, the following steps helped me to get the folder mounted in Linux, the solution was found [here](https://askubuntu.com/questions/456400/why-cant-i-access-a-shared-folder-from-within-my-virtualbox-machine).
 
 1. Create a directory in Windows on any location of your choice.
