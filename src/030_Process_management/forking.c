@@ -24,6 +24,6 @@ int main()
 	{
 		perror("Error while calling the fork function!!");
 	}
-	
+
 	return 0;
 }

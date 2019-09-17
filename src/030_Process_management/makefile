@@ -7,9 +7,11 @@ CFLAGS=-std=c89 -Wpedantic -Wall -O2
 	
 forking: forking.o
 	$(CC) -o $@ $^ $(CFLAGS)
-	
+
+vforking: vforking.o
+	$(CC) -o $@ $^ $(CFLAGS)	
 
 .PHONY: clean
 
 clean:
-	rm -f *.o forking
+	rm -f *.o forking vforking
