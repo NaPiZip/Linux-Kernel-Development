@@ -123,7 +123,7 @@ What is a process? A program itself is not a process; a process is an active pro
 Indeed, two or more processes can exist that are executing the same program. A process is a program in execution, containing a set of resources such as open files and pending signals, internal kernel data, processor state, a memory address space with one or more memory mappings, one or more threads of execution, and a data section containing global variables.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/NaPiZip/Linux-kernel-development/master/images/Forking%20and%20waiting.JPG" alt="Forking and waiting"/></p>
+<img src="https://raw.githubusercontent.com/NaPiZip/Linux-kernel-development/master/Robert_love/images/Forking%20and%20waiting.JPG" alt="Forking and waiting"/></p>
 
 ### Threads
 Threads on the other hand are objects within the process, Each thread includes a unique program counter (PC), process stack and a set of processor register. The kernel schedules threads not processes! In Linux a Thread is just a special variation of a process, it's kin of a light version.
@@ -133,7 +133,7 @@ The kernel stores the list of processes in a circular doubly linked list called 
 a specific process. The struct `thread_info`, lives at the bottom of the stack and points to a `task_struct`, which is part of the task list.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/NaPiZip/Linux-kernel-development/master/images/Process%20kernel%20stack.JPG" alt="Process Kernel Stack" height="50%" width="50%"/></p>
+<img src="https://raw.githubusercontent.com/NaPiZip/Linux-kernel-development/master/Robert_love/images/Process%20kernel%20stack.JPG" alt="Process Kernel Stack" height="50%" width="50%"/></p>
 
 ### The Process Family Tree
 All processes are descendants of the init process, whose PID is one. The kernel starts init in the last step of the boot process. The init process, in turn, reads the system initscripts and executes more programs, eventually completing the boot process.
