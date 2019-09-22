@@ -19,6 +19,7 @@ Here is a sorted list of tutorials in the order which I recommend diving into it
 1. How to Build A Custom Linux Kernel For QEMU (2015 Edition), by [Mitchel Humpherys](http://mgalgs.github.io/2015/05/16/how-to-build-a-custom-linux-kernel-for-qemu-2015-edition.html).
 
   This fine piece gives you an overview on how to build the kernel an load it into a emulator called QEMU.
+  
 2. Linux From Scratch, Version 9.0, by [Gerard Beekmans](http://www.linuxfromscratch.org/lfs/view/stable/index.html)
 
   This tutorial is a good hands on guide with a lot of explanation, ideal for getting the hands dirty.
