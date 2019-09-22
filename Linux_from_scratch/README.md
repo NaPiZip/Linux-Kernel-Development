@@ -25,7 +25,7 @@ This is just a quick summary of how to set up QEMU in order to run custom build 
 
 ## tutorial
 
-Continue [here](http://www.linuxfromscratch.org/lfs/view/stable/chapter03/patches.html).
+Continue [here](http://www.linuxfromscratch.org/lfs/view/stable/chapter05/binutils-pass1.html).
 
 <b>How to apply a patch</b>
 Here is a brief description on how to apply patches, assuming I have the `.path` or `.diff` file:
