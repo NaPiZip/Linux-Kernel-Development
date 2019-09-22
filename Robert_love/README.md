@@ -181,9 +181,5 @@ The goal is to rank processes based on their worth and need for processor time. 
 ### Timeslice
 Represents the numeric value on how ling a task can run without interruption. The scheduler policy defines a default Timeslice. A too long timeslice causes the system to have poor interactive performance. To short causes a lot of time being wasted on context switching of the processor.
 
-Other good tutorials can be found [here](https://kernelnewbies.org/).
-
-Also found a diamond [here](http://www.linuxfromscratch.org/lfs/view/stable/index.html).
-
 ## Contributing
 To get started with contributing to mu GitHub repo, please contact me <a href="https://slack.com/">Slack<a/>.
