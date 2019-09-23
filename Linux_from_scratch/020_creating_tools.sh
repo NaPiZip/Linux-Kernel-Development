@@ -13,3 +13,8 @@ cd build/
              --target=$LFS_TGT          \
              --disable-nls              \
              --disable-werror
+
+cd $LFS/sources
+mv -v mpfr-4.0.2 gcc-9.2.0/gcc/mpfr
+mv -v gmp-6.1.2 gcc-9.2.0/gcc/gmp
+mv -v mpc-1.1.0 gcc-9.2.0/gcc/mpc
