@@ -15,6 +15,6 @@ cd build/
              --disable-werror
 
 cd $LFS/sources
-mv -v mpfr-4.0.2 gcc-9.2.0/mpfr
 mv -v gmp-6.1.2 gcc-9.2.0/gmp
+mv -v mpfr-4.0.2 gcc-9.2.0/mpfr
 mv -v mpc-1.1.0 gcc-9.2.0/mpc

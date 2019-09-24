@@ -23,9 +23,9 @@
 
 This is just a quick summary of how to set up QEMU in order to run custom build kernels. This document is based on the tutorial of [Mitchel Humpherys](http://mgalgs.github.io/2015/05/16/how-to-build-a-custom-linux-kernel-for-qemu-2015-edition.html). My intent is not to copy the tutorial of Mitchel, I am just adding things I think are important so I have a centralized documentation for me.
 
-## tutorial
+## Tutorial
 
-Continue [here](http://www.linuxfromscratch.org/lfs/view/stable/chapter05/binutils-pass1.html).
+Continue [here](http://www.linuxfromscratch.org/lfs/view/stable/chapter05/gcc-pass1.html).
 
 <b>How to apply a patch</b>
 Here is a brief description on how to apply patches, assuming I have the `.path` or `.diff` file:
@@ -49,6 +49,22 @@ Here is a brief description on how to apply patches, assuming I have the `.path`
 
   Depending on the path, it's sometimes necessary to adjust the path directory wit `-p1`, which omits the first path directory.
 
+## Issues
+This section describes all issues I encountered.
+
+<b>Building gcc</b>
+I tried to build gcc as described under [5.5.1.](http://www.linuxfromscratch.org/lfs/view/stable/chapter05/gcc-pass1.html), but got the following error message during building:
+```
+checking for x86_64-lfs-linux-gnu-gcc... /home/nawin/wd/lfs/sources/gcc-9.2.0/build/./gcc/xgcc -B/home/nawin/wd/lfs/sources/gcc-9.2.0/build/./gcc/ -B/tools/x86_64-lfs-linux-gnu/bin/ -B/tools/x86_64-lfs-linux-gnu/lib/ -isystem /tools/x86_64-lfs-linux-gnu/include -isystem /tools/x86_64-lfs-linux-gnu/sys-include   
+checking for suffix of object files... configure: error: in `/home/nawin/wd/lfs/sources/gcc-9.2.0/build/x86_64-lfs-linux-gnu/libgcc':
+configure: error: cannot compute suffix of object files: cannot compile
+See `config.log' for more details
+Makefile:12427: recipe for target 'configure-target-libgcc' failed
+make[1]: *** [configure-target-libgcc] Error 1
+make[1]: Leaving directory '/home/nawin/wd/lfs/sources/gcc-9.2.0/build'
+Makefile:939: recipe for target 'all' failed
+make: *** [all] Error 2
+```
 
 ## Some other good links
 Just a collection of stuff which I should keep track of:
