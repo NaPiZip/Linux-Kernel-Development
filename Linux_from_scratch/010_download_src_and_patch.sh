@@ -12,8 +12,8 @@ wget --input-file=patch-list --continue --directory-prefix=$LFS/sources
 curl http://www.linuxfromscratch.org/lfs/view/stable/md5sums > md5sums
 
 pushd $LFS/sources
-md5sum -c ${SCRIPT_DIR}/md5sums
-md5sum -c ${SCRIPT_DIR}/patch-list-md5sums
+md5sum -c $LFS/md5sums
+md5sum -c $SCRIPT_DIR/patch-list-md5sums
 popd
 
 ls | grep .tar | xargs -i tar xf {}

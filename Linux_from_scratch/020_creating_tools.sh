@@ -1,6 +1,5 @@
 #!/bin/bash
-LFS_TGT=$(uname -m)-lfs-linux-gnu
-export MAKEFLAGS='-j 2'
+mkdir $LFS/tools
 ln -sv $LFS/tools /
 
 cd $LFS/sources/binutils-2.32
@@ -13,6 +12,7 @@ cd build/
              --target=$LFS_TGT          \
              --disable-nls              \
              --disable-werror
+make && make check && sudo make install
 
 cd $LFS/sources
 mv -v gmp-6.1.2 gcc-9.2.0/gmp
