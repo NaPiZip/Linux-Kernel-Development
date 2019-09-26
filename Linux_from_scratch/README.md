@@ -27,6 +27,13 @@ This is just a quick summary of how to set up QEMU in order to run custom build 
 
 Continue [here](http://www.linuxfromscratch.org/lfs/view/stable/chapter05/gcc-pass1.html).
 
+<b>How to change the version of make to users compiled one</b>
+Insert the following line at the end of `~/.bashrc` for bash:
+```
+export PATH="/usr/local/bin:$PATH"
+```
+This makes sure that `/user/local/bin` is searched first after all other locations, meaning the users executables will be used first.
+
 <b>How to apply a patch</b>
 Here is a brief description on how to apply patches, assuming I have the `.path` or `.diff` file:
 1. Inspect the `.patch` file using `cat`.
