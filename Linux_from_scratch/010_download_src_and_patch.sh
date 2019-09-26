@@ -1,6 +1,5 @@
 #!/bin/bash
 
-export LFS=~/wd/lfs
 SCRIPT_DIR=${PWD}
 
 mkdir -vp $LFS/sources
