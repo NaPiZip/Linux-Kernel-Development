@@ -27,6 +27,15 @@ This is just a quick summary of how to set up QEMU in order to run custom build 
 
 Continue [here](http://www.linuxfromscratch.org/lfs/view/stable/chapter05/gcc-pass1.html).
 
+
+<b>How to build binutils 2.25</b>
+Link can be found [here](http://www.linuxfromscratch.org/lfs/view/development/chapter06/binutils.html).
+
+<b>How to fix broken packages</b>
+In order to fix a broken `binutils`, use the following command.
+```
+sudo apt-get install --reinstall binutils
+```
 <b>How to change the version of make to users compiled one</b>
 Insert the following line at the end of `~/.bashrc` for bash:
 ```
@@ -73,11 +82,8 @@ Makefile:939: recipe for target 'all' failed
 make: *** [all] Error 2
 ```
 
-## Some other good links
-Just a collection of stuff which I should keep track of:
-- Other good tutorials can be found [here](https://kernelnewbies.org/).
-- Also found a diamond [here](http://www.linuxfromscratch.org).
-- More nice resources on that topic, [here](https://www.threatstack.com/blog/c-in-the-linux-kernel).
+## Decision
+I decided to stop this tutorial since the target is only to build Linux from scratch and it does not teach anything. Therefore I am switching to [this](https://embetronicx.com/tutorials/linux/device-drivers/page/3/) tutorial.
 
 ## Contributing
 To get started with contributing to mu GitHub repo, please contact me <a href="https://slack.com/">Slack<a/>.
